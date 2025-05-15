@@ -1,17 +1,13 @@
+# Utwórz plik `.github/workflows/hello_world.yaml` z poniższą zawartością
+
 name: Hello World workflow
 on:
-  # workflow_dispatch option enables manual trigger button
-  workflow_dispatch:
+  workflow_dispatch: # umożliwia ręczne uruchamianie workflow
 
-# under job key we define the names and jobs definitions, typically as multiple steps
-# e.g. what commands to run, what environment to set
 jobs:
-  # our job name: `hello-world-job`
   hello-world-job:
-    # our job definition
-    runs-on: ubuntu-latest # here, define image on which we will run our job
+    runs-on: ubuntu-latest # użycie obrazu Ubuntu
 
-    # definitions of all job steps
     steps:
-     - name: Print Hello World # step name, displayed on UI
-       run: echo "Hello world! # print "Hello world!" here
+      - name: Print Hello World # nazwa kroku
+        run: echo "Hello world!" # polecenie do wydrukowania "Hello world!"
